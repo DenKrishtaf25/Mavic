@@ -80,6 +80,9 @@ body {
     transition: 1s all;
     opacity: 1;
     visibility: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .loader {
         width: 75px;
         height: 75px;
@@ -87,9 +90,6 @@ body {
         border-radius: 50%;
         border-top-color: #093428;
         position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translateX(-50%, -50%);
         animation: 1s spin infinite linear;
     }
     &.done {
