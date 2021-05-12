@@ -68,3 +68,41 @@ body {
     left: 0;
     bottom: 0;
 }
+
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #212121;
+    z-index: 30;
+    transition: 1s all;
+    opacity: 1;
+    visibility: visible;
+    .loader {
+        width: 75px;
+        height: 75px;
+        border: 10px white solid;
+        border-radius: 50%;
+        border-top-color: #093428;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%, -50%);
+        animation: 1s spin infinite linear;
+    }
+    &.done {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
